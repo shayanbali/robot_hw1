@@ -8,7 +8,7 @@ from hw0.msg import direction
 def callback(data):
     degree = 0
     rotate_direction = 0 # 1: clockwise  -1: counter clockwise   0:fixed
-    rospy.loginfo(rospy.get_caller_id() + 'received ditances: %s', data)
+    rospy.loginfo(rospy.get_caller_id() + '\nreceived ditances: %s', data)
     distance_list = []
     distance_list.append(data.up)
     distance_list.append(data.down)
@@ -32,7 +32,7 @@ def callback(data):
     msg.degree = degree
     msg.rotate = rotate_direction
 
-    rospy.loginfo("published rotation: \n %s", msg)
+    rospy.loginfo("\npublished rotation: \n %s", msg)
     pub1.publish(msg)
     pub2.publish(msg)
 
