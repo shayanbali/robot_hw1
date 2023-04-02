@@ -1,0 +1,2 @@
+int64 degree
+int64 rotate
